@@ -1,0 +1,215 @@
+main{
+    .content{
+        display: flex;
+        height: 100%;
+    }
+    .text{
+        flex-basis: 65%;
+        background: #fff;
+        // height: 100vh;
+        border: 0px solid transparent;
+        .text-container{
+            padding: 9.5rem 4rem 0;
+            h1{
+                font-size: 3.5rem;
+                line-height: 4rem;
+                font-weight: 400;
+                margin-bottom: 1.5rem; 
+            }
+            p{
+                font-size: 0.95rem;
+                max-width: 30rem;
+                margin-bottom: 1.5rem;
+            }
+            .btn{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 6rem;
+                button{
+                    border: none;
+                    background:#D4191F;
+                    padding: 0.8rem 1.8rem;
+                    color: white;
+                    font-size: 1.05rem;
+                    border-radius: 0.2rem;
+                    cursor: pointer;
+                    text-shadow: 2px 2px 4px #000000;
+                    &:hover{
+                        background:rgb(97, 97, 97);
+                        color: #fff;
+                    }
+                    &:nth-of-type(2){
+                        background: transparent;
+                        color: #000;
+                        position: relative;
+                        text-shadow: none;
+                        #play{
+                            margin-right: 0.5rem;
+                        }
+                        &::before,&::after{
+                            content:'';
+                            width: 12rem;
+                            height: 3rem;
+                            border: 1px solid #000;
+                            border-radius: 50%;
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            transition: 0.3s ease all;
+
+                        }
+                        &::before{
+                            transform: rotate(-5deg);
+                        }
+                        &:hover::before{
+                            transform: rotate(7deg);
+                        }
+                        &:hover::after{
+                            transform: rotate(-7deg);
+                        }
+                    }
+                }
+            }
+            .sound-wave{
+                width: 100%;
+                img{
+                    width: 23rem;
+                }
+                h3{
+                    font-size: 1.05rem;
+                    font-weight: 200;
+                }
+            }
+        }
+    }
+    .product{
+        background: rgb(97, 97, 97);
+        border: 0px solid rgb(255, 255, 255);
+        flex-basis: 100%;
+        height: 100vh;
+        .product-container{
+            .swiper{
+                width: 50rem;
+                margin: 5rem auto 0;
+                height: 40rem;
+                .swiper-button-prev{
+                    color: white;
+                }
+                .swiper-button-next{
+                    color: white;
+                }
+                .swiper-pagination{
+                    width: 10px;
+                    border-radius: none;
+                }
+                .swiper-wrapper{
+                    .swiper-slide{
+                        object-fit: cover;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .head{
+                            width: 85%;
+                            height: 100%;
+                            margin-top: 5rem;
+                        }
+                        .rotate{
+                            transform: rotate(-15deg);
+                            height: 90%;
+                            margin-top: 1.5rem;                    
+                        }
+                        img{
+                            width: 75%;
+                            height: 90%;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+// background: rgb(97, 97, 97);
+@media only screen and (max-width: 600px){
+    body{
+        main{
+            .content{
+                flex-direction: column-reverse;
+                .text{
+                    flex-basis: 100%;
+                    .text-container{
+                        padding: 2.5rem 1.5rem;
+                        h1{
+                            font-size: 2.5rem;
+                            line-height: 2.5rem;
+                        }
+                        p{
+                            font-size: 0.8rem;
+                        }
+                        .btn{
+                            flex-direction: column;
+                            gap: 1.6rem;
+                            margin-bottom: 5rem;
+                            button{
+                                width: 100%;
+                                border-radius: 0.3rem;
+                                &::before,&::after{
+                                    width: 100%;
+                                }
+                                &::before{
+                                    transform: rotate(-3deg);
+                                }
+                            }
+                        }
+                        .sound-wave{
+                            img{
+                                width: 100%;
+                            }
+                            h3{
+                                font-size: 0.9rem;
+                            }
+                        }
+                    }
+                }
+                .product{
+                    .product-container{
+                        .swiper{
+                            margin: 8rem auto;
+                            width: 100%;
+                            height: 100%;
+                            .swiper-wrapper{
+                                .swiper-slide{
+                                    object-fit: cover;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+            
+                                    .head{
+                                        width: 90%;
+                                        margin-top: 2rem;
+                                        margin-left: 0.8rem;
+                                    }
+                                    .rotate{
+                                        transform: rotate(-15deg);
+                                        margin-top: 2rem;
+                                    }
+                                    .tilt{
+                                        margin-top: 2rem;
+                                    }
+                                    img{
+                                        width: 80%;
+                                        height: 90%;
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

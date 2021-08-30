@@ -1,0 +1,453 @@
+main .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+main .text {
+  -ms-flex-preferred-size: 65%;
+      flex-basis: 65%;
+  background: #fff;
+  border: 0px solid transparent;
+}
+
+main .text .text-container {
+  padding: 9.5rem 4rem 0;
+}
+
+main .text .text-container h1 {
+  font-size: 3.5rem;
+  line-height: 4rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+main .text .text-container p {
+  font-size: 0.95rem;
+  max-width: 30rem;
+  margin-bottom: 1.5rem;
+}
+
+main .text .text-container .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  margin-bottom: 6rem;
+}
+
+main .text .text-container .btn button {
+  border: none;
+  background: #D4191F;
+  padding: 0.8rem 1.8rem;
+  color: white;
+  font-size: 1.05rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+main .text .text-container .btn button:nth-of-type(2) {
+  background: transparent;
+  color: #000;
+  position: relative;
+  text-shadow: none;
+}
+
+main .text .text-container .btn button:nth-of-type(2) #play {
+  margin-right: 0.5rem;
+}
+
+main .text .text-container .btn button:nth-of-type(2)::before, main .text .text-container .btn button:nth-of-type(2)::after {
+  content: '';
+  width: 12rem;
+  height: 3rem;
+  border: 1px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+main .text .text-container .btn button:nth-of-type(2)::before {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+
+main .text .text-container .btn button:nth-of-type(2):hover::before {
+  -webkit-transform: rotate(26deg);
+          transform: rotate(26deg);
+}
+
+main .text .text-container .btn button:nth-of-type(2):hover::after {
+  -webkit-transform: rotate(-26deg);
+          transform: rotate(-26deg);
+}
+
+main .text .text-container .sound-wave {
+  width: 100%;
+}
+
+main .text .text-container .sound-wave img {
+  width: 23rem;
+}
+
+main .text .text-container .sound-wave h3 {
+  font-size: 1.05rem;
+  font-weight: 200;
+}
+
+main .product {
+  background: #616161;
+  border: 0px solid white;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 100vh;
+}
+
+main .product .product-container .swiper {
+  width: 50rem;
+  margin: 5rem auto 0;
+  height: 40rem;
+}
+
+main .product .product-container .swiper .swiper-button-prev {
+  color: white;
+}
+
+main .product .product-container .swiper .swiper-button-next {
+  color: white;
+}
+
+main .product .product-container .swiper .swiper-pagination {
+  width: 10px;
+  border-radius: none;
+}
+
+main .product .product-container .swiper .swiper-wrapper .swiper-slide {
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .product .product-container .swiper .swiper-wrapper .swiper-slide .head {
+  width: 85%;
+  height: 100%;
+  margin-top: 5rem;
+}
+
+main .product .product-container .swiper .swiper-wrapper .swiper-slide .rotate {
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  height: 90%;
+  margin-top: 1.5rem;
+}
+
+main .product .product-container .swiper .swiper-wrapper .swiper-slide img {
+  width: 75%;
+  height: 90%;
+}
+
+@media only screen and (max-width: 600px) {
+  body main .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  body main .content .text {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  body main .content .text .text-container {
+    padding: 2.5rem 1.5rem;
+  }
+  body main .content .text .text-container h1 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+  body main .content .text .text-container p {
+    font-size: 0.8rem;
+  }
+  body main .content .text .text-container .btn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 5rem;
+  }
+  body main .content .text .text-container .btn button {
+    width: 100%;
+    border-radius: 0.3rem;
+  }
+  body main .content .text .text-container .btn button::before, body main .content .text .text-container .btn button::after {
+    width: 100%;
+  }
+  body main .content .text .text-container .btn button::before {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+  }
+  body main .content .text .text-container .sound-wave img {
+    width: 100%;
+  }
+  body main .content .text .text-container .sound-wave h3 {
+    font-size: 0.9rem;
+  }
+  body main .content .product .product-container .swiper {
+    margin: 8rem auto;
+    width: 100%;
+    height: 100%;
+  }
+  body main .content .product .product-container .swiper .swiper-wrapper .swiper-slide {
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main .content .product .product-container .swiper .swiper-wrapper .swiper-slide .head {
+    width: 90%;
+    margin-top: 2rem;
+  }
+  body main .content .product .product-container .swiper .swiper-wrapper .swiper-slide .rotate {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+    margin-top: 3rem;
+  }
+  body main .content .product .product-container .swiper .swiper-wrapper .swiper-slide .tilt {
+    margin-top: 2rem;
+  }
+  body main .content .product .product-container .swiper .swiper-wrapper .swiper-slide img {
+    width: 80%;
+    height: 90%;
+  }
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+body main {
+  position: relative;
+}
+
+body main header {
+  padding: 1rem 3.5rem 1rem 2rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  z-index: 10;
+}
+
+body main header .logo {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+body main header .logo img {
+  height: 3rem;
+}
+
+body main header .close ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+body main header .close ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+body main header .close ul li a::after {
+  content: '';
+  width: 100%;
+  height: 0.2rem;
+  background: #f13a77;
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  -webkit-transition: 200ms ease-in all;
+  transition: 200ms ease-in all;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+body main header .close ul li a:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+body main header .close ul li .active {
+  padding: 0.6rem 1.6rem;
+  background: #D4191F;
+  border-radius: 0.2rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+body main header .close ul li .active::after {
+  content: '';
+  display: none;
+}
+
+body main header .close ul li .active:hover {
+  background: #fff;
+  color: #000;
+  text-shadow: none;
+}
+
+body main header .ham {
+  width: 1.7rem;
+  height: 1.3rem;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+
+body main header .ham .ham-menu {
+  border-radius: 0.5rem;
+  width: 100%;
+  background: #fff;
+}
+
+body main header .ham .ham-menu::before, body main header .ham .ham-menu::after, body main header .ham .ham-menu .bar {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.2rem;
+  background: #fff;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  border-radius: 0.5rem;
+}
+
+body main header .ham .ham-menu .bar {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+body main header .ham .ham-menu::before {
+  top: 0;
+}
+
+body main header .ham .ham-menu::after {
+  bottom: 0;
+}
+
+body main header .open {
+  display: block;
+}
+
+body main header .open .ham-menu .bar {
+  opacity: 0;
+}
+
+body main header .open .ham-menu::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 9px;
+}
+
+body main header .open .ham-menu::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: 9px;
+}
+
+@media only screen and (max-width: 600px) {
+  body main {
+    margin: 0 auto;
+  }
+  body main header {
+    padding: 1rem 1.5rem 0 0;
+    width: 100%;
+  }
+  body main header .close {
+    position: absolute;
+    right: 0;
+    background: black;
+    width: 100%;
+    top: 100%;
+    height: 110vh;
+    -webkit-transform: translateY(-100rem);
+            transform: translateY(-100rem);
+    -webkit-transition: 500ms ease-in all;
+    transition: 500ms ease-in all;
+  }
+  body main header .close ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 30vh;
+  }
+  body main header .close ul li a {
+    color: white;
+    font-size: 1.5rem;
+  }
+  body main header .visible {
+    -webkit-transform: translateY(-10vh);
+            transform: translateY(-10vh);
+  }
+  body main header .ham {
+    display: block;
+  }
+}
+/*# sourceMappingURL=style.css.map */
